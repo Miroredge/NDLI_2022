@@ -14,3 +14,5 @@ Liste des gens présent :
 | Oscar       |  PLAISANT  | L2 |
 | Antoine     |  MONTAUT   | L2 |
 | Yanis       |  SOURIOU   | L2 |
+| Dario       |  WEINBERGER| R&T2 |
+| Nassim      |  BELHADJ   | R&T2 |
