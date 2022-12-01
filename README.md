@@ -1,7 +1,7 @@
 Liste des gens présent : 
 
 | Nom         | Prénom     | Promotion |
-|-------------|------------|----|
+|:-------------:|:------------:|:----:|
 | Malaury     |  HUON      | L1 |
 | Bastien     |  BROUSSE   | L1 |
 | Maximilien  |  PONCET    | L2 |
@@ -12,5 +12,5 @@ Liste des gens présent :
 | Yasin       |  AY        | L2 |
 | Ismail      |  AMEZQUITI | L2 |
 | Oscar       |  PLAISANT  | L2 |
-| Yanis       |  SOURIOU   | L2 |
 | Antoine     |  MONTAUT   | L2 |
+| Yanis       |  SOURIOU   | L2 |
