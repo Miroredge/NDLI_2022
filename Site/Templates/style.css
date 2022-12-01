@@ -4,7 +4,30 @@
  --lightgreen: #9ECDA6;
  --lightgrey: #C0BFBF;
  --darkgrey: #23282D;
- --bg: white;
+ --bg: black;
+ --nav-bg: var(--green);
+ --nav-fg: white;
 }
 
+body {
+    background-color: var(--bg);
+}
+
+
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 1vw;
+    width: 100%;
+    background: var(--nav-bg);
+    color: var(--nav-fg);
+    font-size: 3vw;
+    font-family: Verdana;
+}
+
+.navbar ul li {
+    display: inline;
+    padding: 2vw;
+    border: none;
+}
 
