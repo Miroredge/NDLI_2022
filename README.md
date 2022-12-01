@@ -1,8 +1,9 @@
 Liste des gens présent : 
 
-| Malaury     |  HUON      | L1 |
+| Nom         | Prénom     | Promotion |
 |-------------|------------|----|
-| Bastien     |  BROUSSE   | L2 |
+| Malaury     |  HUON      | L1 |
+| Bastien     |  BROUSSE   | L1 |
 | Maximilien  |  PONCET    | L2 |
 | Max         |  LEMOINE   | L2 |
 | Nikola      |  GANDON    | L2 |
