@@ -40,11 +40,14 @@ function(e) {
             window.location = "index.html#accueil";
             break;
         case '2':
-            window.location = "index.html#about";
+            window.location = "index.html#quizz";
             break;
         case '3':
-            window.location = "index.html#contact";
+            window.location = "index.html#informations";
             break;
+        case 'q':
+        case 'Q':
+            window.location = "quizz.html";
         default:
             console.log(key);
             break;
