@@ -22,6 +22,18 @@ function is_konami(l) {
     return arrayEqual(l, konami);
 }
 
+function downloadURI(uri, name)
+{
+    var link = document.createElement("a");
+    // If you don't know the name or want to use
+    // the webserver default set name = ''
+    link.setAttribute('download', name);
+    link.href = uri;
+    document.body.appendChild(link);
+    link.click();
+    link.remove();
+}
+
 window.addEventListener('keydown',
 function(e) {
     let key = e.key;
@@ -48,11 +60,17 @@ function(e) {
         case 'q':
         case 'Q':
             window.location = "quizz.html";
+            break;
+        case 'd':
+        case 'D':
+            downloadURI("assets/img/prot3ct_yours3lf.png", "pr0t3ct_y0urs3lf.png");
+            break;
         default:
             console.log(key);
             break;
     }
 }, false);
+
 
 
 
