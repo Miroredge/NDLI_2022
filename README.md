@@ -21,14 +21,27 @@ Liste des gens présent :
 
 ## Easter Egg
 
-La page de l'easter egg est accessible en tapant le konami code dans la page d'accueil.
+La page de l'easter egg est accessible en tapant le konami code dans la page d'accueil (voir le défi suivant).
+
+### Description de l'easter egg
+**CPT** (C'est Pété) cf.: @Vilebrequin
+
 
 ## This is better than hadouken
 
-Depuis la page d'accueil, on peut taper le konami code (haut haut bas bas gauche droite gauche droite b a).
+Depuis la page d'accueil, on peut taper le konami code (au clavier, avec les flèches : `haut haut bas bas gauche droite gauche droite b a`).
 Cela ouvre la page de l'easter Egg.
 
-##
 
+## Ubisoft
 
+~~TODO~~
+
+## Le chat l'a attrappée
+
+ - presser les touches 1, 2 et 3 amène sur des pages d'informations de la page principale
+ - Dans la page principale 
+     - presser q lance le quizz
+     - presser d télécharge le logo de prévention
+     - presser c montre les crédits du site (les auteurs)
 
