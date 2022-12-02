@@ -59,15 +59,21 @@ function(e) {
             break;
         case 'q':
         case 'Q':
-            window.location = "quizz.html";
+            if (String(window.location).includes("index")) {
+                window.location = "quizz.html";
+            }
             break;
         case 'd':
         case 'D':
-            downloadURI("assets/img/prot3ct_yours3lf.png", "pr0t3ct_y0urs3lf.png");
+            if (String(window.location).includes("index")) {
+                downloadURI("assets/img/prot3ct_yours3lf.png", "pr0t3ct_y0urs3lf.png");
+            }
             break;
         case 'C':
         case 'c':
-            window.location = "credit.html";
+            if (String(window.location).includes("index")) {
+                window.location = "credit.html";
+            }
         default:
             console.log(key);
             break;
