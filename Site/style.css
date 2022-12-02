@@ -12,13 +12,15 @@
 body {
     background-color: var(--bg);
     font-family: Garamond;
+    margin: 0; padding: 0;
 }
 
 
 .navbar ul {
     list-style-type: none;
     margin: 0;
-    padding: 0.5vw;
+    padding-top: 1vw;
+    padding-bottom: 1vw;
     width: 100%;
     background: var(--nav-bg);
     color: var(--nav-fg);
