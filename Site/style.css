@@ -18,18 +18,29 @@ body {
 .navbar ul {
     list-style-type: none;
     margin: 0;
-    padding: 1vw;
+    padding: 0.5vw;
     width: 100%;
     background: var(--nav-bg);
     color: var(--nav-fg);
-    font-size: 3vw;
+    font-size: 2vw;
     font-family: Verdana;
+}
+
+.navbar ul:hover{
+    padding: 1.75vw;
+    transition-duration: 500ms;
 }
 
 .navbar ul li {
     display: inline;
-    padding: 2vw;
+    padding: 1.5vw;
     border: none;
+}
+
+.navbar ul li:hover {
+    background-color: var(--lightgrey);
+    transition-duration: 500ms;
+    border-radius: 10px;
 }
 
 .active {
@@ -41,6 +52,5 @@ body {
 #timer {
     color: var(--nav-fg);
     font-weight: bold;
-    font-weight: 2em;
     font-size: 2em;
 }
