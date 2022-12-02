@@ -74,6 +74,11 @@ function(e) {
             if (String(window.location).includes("index")) {
                 window.location = "credit.html";
             }
+        case 'B':
+        case 'b':
+            if (String(window.location).includes("index")) {
+                window.location = "chauvinisme.html";
+            }
         default:
             console.log(key);
             break;
