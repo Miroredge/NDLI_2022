@@ -65,9 +65,13 @@ function(e) {
         case 'D':
             downloadURI("assets/img/prot3ct_yours3lf.png", "pr0t3ct_y0urs3lf.png");
             break;
+        case 'C':
+        case 'c':
+            window.location = "credit.html";
         default:
             console.log(key);
             break;
+        
     }
 }, false);
 
