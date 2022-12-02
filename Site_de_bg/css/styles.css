@@ -585,6 +585,13 @@ progress {
   text-transform: uppercase;
 }
 
+#timer {
+  color: var(--nav-fg);
+  font-weight: bold;
+  font-size: 2em;
+}
+
+
 .blockquote {
   margin-bottom: 1rem;
   font-size: 1.25rem;
