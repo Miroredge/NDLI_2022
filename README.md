@@ -24,6 +24,7 @@ Liste des gens présent :
 La page de l'easter egg est accessible en tapant le konami code dans la page d'accueil (voir le défi suivant).
 
 ### Description de l'easter egg
+
 **CPT** (C'est Pété) cf.: @Vilebrequin
 
 
@@ -35,7 +36,7 @@ Cela ouvre la page de l'easter Egg.
 
 ## Ubisoft
 
-~~TODO~~
+Presser b afin d'accéder à la page de Notre région !! (41 !)
 
 ## Le chat l'a attrappée
 
