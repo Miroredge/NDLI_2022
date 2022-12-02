@@ -24,13 +24,35 @@ body {
     width: 100%;
     background: var(--nav-bg);
     color: var(--nav-fg);
-    font-size: 3vw;
+    font-size: 2vw;
     font-family: Verdana;
+}
+
+.navbar ul:hover{
+    padding: 1.75vw;
+    transition-duration: 500ms;
 }
 
 .navbar ul li {
     display: inline;
-    padding: 2vw;
+    padding: 1.5vw;
     border: none;
 }
 
+.navbar ul li:hover {
+    background-color: var(--lightgrey);
+    transition-duration: 500ms;
+    border-radius: 10px;
+}
+
+.active {
+    background: lightgreen;
+    color: white;
+    border-radius: 15px;
+}
+
+#timer {
+    color: var(--nav-fg);
+    font-weight: bold;
+    font-size: 2em;
+}
