@@ -15,19 +15,19 @@
 // }, 1000)
 
 
-document.getElementById("timerStart").addEventListener("click", function(){
-  var timeleft = 15;
+var timeleft = 120;
 
-  var downloadTimer = setInterval(function function1(){
-  document.getElementById("countdown").innerHTML = timeleft + 
-  "&nbsp"+"seconds remaining";
+var downloadTimer = setInterval(function function1(){
+document.getElementById("timer").innerHTML = timeleft + 
+"&nbsp"+"seconds remaining";
 
-  timeleft -= 1;
-  if(timeleft <= 0){
-      clearInterval(downloadTimer);
-      document.getElementById("countdown").innerHTML = "Time is up!"
-  }
-  }, 1000);
+timeleft -= 1;
+if(timeleft < 0){
+    clearInterval(downloadTimer);
+    document.getElementById("timer").innerHTML = "Time is up!"
+    // redirect to index.html
+    window.location.href = "index.html";
+}
+}, 1000);
 
-  console.log(countdown);
-});
+console.log(timer);
