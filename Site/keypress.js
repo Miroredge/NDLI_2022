@@ -1,7 +1,7 @@
 
 
-function onkeypress() {
-    console.log("you pressed a key");
+function OnKeyPress(e) {
+    console.log(e.key);
 }
 
 
