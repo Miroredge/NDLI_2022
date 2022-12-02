@@ -19,6 +19,15 @@ Liste des gens présent :
 
 # Défis
 
+## Défi Principal
+
+Nous avons choisis de faire un quizz qui se mêlerait avec les défis choisis ci-dessous,
+Afin d'être le plus ludique et visuel sur la prévention contre le SIDA.
+Le quizz se déroule en 10 questions, à choix multiples ou non avec les touches comme indiqué.
+Le joueur doit répondre à toutes les questions par le clavier pour correspondre au défi "Le chat l'a attrappée"
+L'easter Egg est en corrélation avec le défi "Better than hadouken" et mêle culture et Humour avec un personnage clin d'oeuil à Star Wars et Among Us (célèbre jeux vidéo)
+
+
 ## Easter Egg
 
 La page de l'easter egg est accessible en tapant le konami code dans la page d'accueil (voir le défi suivant).
@@ -36,7 +45,7 @@ Cela ouvre la page de l'easter Egg.
 
 ## Ubisoft
 
-Presser b afin d'accéder à la page de Notre région !! (41 !)
+Presser R afin d'accéder à la page de Notre région !! (41 !)
 
 ## Le chat l'a attrappée
 
@@ -45,4 +54,5 @@ Presser b afin d'accéder à la page de Notre région !! (41 !)
      - presser q lance le quizz
      - presser d télécharge le logo de prévention
      - presser c montre les crédits du site (les auteurs)
+
 
