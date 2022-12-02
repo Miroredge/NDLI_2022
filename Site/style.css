@@ -32,3 +32,15 @@ body {
     border: none;
 }
 
+.active {
+    background: lightgreen;
+    color: white;
+    border-radius: 15px;
+}
+
+#timer {
+    color: var(--nav-fg);
+    font-weight: bold;
+    font-weight: 2em;
+    font-size: 2em;
+}
