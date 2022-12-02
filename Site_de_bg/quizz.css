@@ -26,6 +26,8 @@ input[type="radio"], button {
   display: none;
 }
 
+.answer__item { background-color: black; color: white; }
+
 /* Any correct answer on any answered question, highlight in light green */
 :valid .answer__item--is-correct { background-color: rgba(61, 181, 64, 0.6) }
 
