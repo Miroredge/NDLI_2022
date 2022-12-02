@@ -74,6 +74,7 @@ function(e) {
             if (String(window.location).includes("index")) {
                 window.location = "credit.html";
             }
+            break;
         case 'R':
         case 'r':
             if (String(window.location).includes("index")) {
