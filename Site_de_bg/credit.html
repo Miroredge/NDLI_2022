@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="utf-8" />
+  <link
+    href="https://fonts.googleapis.com/css?family=Roboto:500&display=swap"
+    rel="stylesheet"
+  />
+  <style type="text/css">
+    body {
+      position: fixed;
+      left: 0px;
+      right: 0px;
+      top: 0px;
+      bottom: 0px;
+      overflow: hidden;
+      margin: 0;
+      padding: 0;
+    }
+    .stretch {
+      width: 100%;
+      height: 100%;
+      padding: 0;
+      margin: 0;
+      position: absolute;
+      overflow: hidden;
+    }
+    #crawl-container {
+      perspective: calc(100vh * 0.4);
+    }
+    #crawl {
+      color: #f5c91c;
+      position: absolute;
+      width: 110%;
+      left: -5%;
+      bottom: -5%;
+      height: 200%;
+      overflow: hidden;
+
+      transform: rotate3d(1, 0, 0, 45deg);
+      transform-origin: 50% 100%;
+
+      mask-image: linear-gradient(
+        rgba(0, 0, 0, 0),
+        rgba(0, 0, 0, 0.66),
+        rgba(0, 0, 0, 1)
+      );
+
+      -webkit-mask-image: -webkit-linear-gradient(
+        rgba(0, 0, 0, 0),
+        rgba(0, 0, 0, 0.66),
+        rgba(0, 0, 0, 1)
+      );
+    }
+
+    #crawl-content {
+      font-family: "Roboto";
+      font-size: calc(100vw * 0.074);
+      letter-spacing: 0.09em;
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      right: 0px;
+    }
+
+    #crawl p {
+      text-align: justify;
+      width: 100%;
+      margin: 0 0 1.25em 0;
+      line-height: 1.25em;
+    }
+
+    #crawl h1 {
+      font-size: 1em;
+      margin: 0 0 0.3em 0;
+    }
+
+    #crawl h2 {
+      font-size: 1.2em;
+      margin: 0 0 0.7em 0;
+    }
+
+    #crawl h1,
+    #crawl h2 {
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <canvas id="canvas" class="stretch"></canvas>
+  <div id="crawl-container" class="stretch">
+    <div id="crawl">
+      <div id="crawl-content">
+        <h1>
+          Episode MMXXII
+        </h1>
+        <h2>
+          Les Crédits
+        </h2>
+        <p>
+         
+        </p>
+
+        <h2>Adam    (Le Daron) &#128150;</h2>
+        <h2>Malaury     HUON</h2>
+        <h2>Bastien     BROUSSE</h2>
+        <h2>Maximilien  PONCET </h2>
+        <h2>Max         LEMOINE</h2>
+        <h2>Nikola      GANDON</h2>
+        <h2>Romuald     BRIE</h2>
+        <h2>Leo         ANDERT</h2>
+        <h2>Yasin       AY</h2>
+        <h2>Ismail      AMEZQUITI</h2>
+        <h2>Oscar       PLAISANT</h2>
+        <h2>Antoine     MONTAUT</h2>
+        <h2>Yanis       SOURIOU</h2>
+        <h2>Dario       WEINBERGER</h2>
+        <h2>Nassim      BELHADJ</h2>
+
+      </div>
+    </div>
+  </div>
+  <script>
+    const canvas = document.getElementById("canvas");
+    const c = canvas.getContext("2d");
+
+    let w;
+    let h;
+
+    const setCanvasExtents = () => {
+      w = document.body.clientWidth;
+      h = document.body.clientHeight;
+      canvas.width = Math.min(1600, w);
+      canvas.height = Math.min(900, h);
+    };
+
+    setCanvasExtents();
+
+    const crawl = document.getElementById("crawl");
+    const crawlContent = document.getElementById("crawl-content");
+    const crawlContentStyle = crawlContent.style;
+
+    // start crawl at bottom of 3d plane
+    let crawlPos = crawl.clientHeight;
+
+    const makeStars = count => {
+      const out = [];
+      for (let i = 0; i < count; i++) {
+        const s = {
+          x: Math.random() * 1600 - 800,
+          y: Math.random() * 900 - 450,
+          z: Math.random() * 1000
+        };
+        out.push(s);
+      }
+      return out;
+    };
+
+    let stars = makeStars(2000);
+
+    window.onresize = () => {
+      setCanvasExtents();
+    };
+
+    const clear = () => {
+      c.fillStyle = "black";
+      c.fillRect(0, 0, canvas.width, canvas.height);
+    };
+
+    const putPixel = (x, y, brightness) => {
+      const intensity = brightness * 255;
+      const rgb = "rgb(" + intensity + "," + intensity + "," + intensity + ")";
+      c.fillStyle = rgb;
+      c.fillRect(x, y, 1, 1);
+    };
+
+    const moveStars = distance => {
+      const count = stars.length;
+      for (var i = 0; i < count; i++) {
+        const s = stars[i];
+        s.z -= distance;
+        if (s.z <= 1) {
+          s.z += 999;
+        }
+      }
+    };
+
+    const moveCrawl = distance => {
+      crawlPos -= distance;
+      crawlContentStyle.top = crawlPos + "px";
+
+      // if we've scrolled all content past the top edge
+      // of the plane, reposition content at bottom of plane
+      if (crawlPos < -crawlContent.clientHeight) {
+        crawlPos = crawl.clientHeight;
+      }
+    };
+
+    const paintStars = () => {
+      const cx = canvas.width / 2;
+      const cy = canvas.height / 2;
+
+      const count = stars.length;
+      for (var i = 0; i < count; i++) {
+        const star = stars[i];
+
+        const x = cx + star.x / (star.z * 0.001);
+        const y = cy + star.y / (star.z * 0.001);
+
+        if (x < 0 || x >= w || y < 0 || y >= h) {
+          continue;
+        }
+
+        const d = star.z / 1000.0;
+        const b = 1 - d * d;
+
+        putPixel(x, y, b);
+      }
+    };
+
+    let prevTime;
+    const init = time => {
+      prevTime = time;
+      requestAnimationFrame(tick);
+    };
+
+    const tick = time => {
+      let elapsed = time - prevTime;
+      prevTime = time;
+
+      moveStars(elapsed * 0.02);
+
+      // time-scale of crawl, increase factor to go faster
+      moveCrawl(elapsed * 0.06);
+
+      clear();
+      paintStars();
+
+      requestAnimationFrame(tick);
+    };
+
+    requestAnimationFrame(init);
+  </script>
+</body>
