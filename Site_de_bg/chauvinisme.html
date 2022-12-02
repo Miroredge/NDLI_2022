@@ -1,0 +1,63 @@
+<!doctype html>
+<html>
+    <head>
+        <title>RPZ BLOIS</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="assets/img/chauvinisme/style.css">
+    </head>
+
+    <body>
+        <header>
+        <a href="#" class="logo">RPZ BLOIS AKHY</a>
+        <ul>
+            <li><a href="#" class="active">BLOIS</a></1i>
+                <li><a href="#" class="active">Retour Acceuil</a></1i>
+        </ul>
+        </header>
+
+        <section id="menu">
+            <img src="assets/img/chauvinisme/1200px-France_Loir-et-Cher_Chambord_Chateau_03.jpg" id="bg">
+            <img src="assets/img/chauvinisme/client_blois-removebg-preview.png" id="logo">
+            
+            <h2 id="text">Bienvenue a Blois</h2>
+            <a href="#sec" id="btn">Découvrir 🔍</a>
+        </section>
+
+        <div class="sec" id="sec">
+            <h2>Gallerie Photo de Blois 🎨</h2>
+            
+            <h2> <br>Belle photo de notre magnifique ville:</h2>
+            <br> <br>
+            <img src="assets/img/chauvinisme/blois-montgolfiere-201707-fchristophe-DSC_2275_0.jpg" stylealign="center" /> 
+            <br><br> 
+            <img src="assets/img/chauvinisme/blois-maisondelamagie-201804-fchristophe-FC18783.jpg" stylealign="center" /> 
+            <img src="assets/img/chauvinisme/blois-chateauroyal-201803-pashrash-26079_982_1_RET.jpg" stylealign="center" />
+            <video controls poster="../image/Apercuvid.png" autoplay muted>
+                <source src="assets/img/chauvinisme/1486685305.mp4" type="video/mp4" > <!--integration d'une vidéo et de la barre de controle-->
+            </video>
+            <br><br>
+            <h2>Et si vous veniez à Blois ?</h2>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15532405.62924225!2d-1.132797500265635!3d47.75161314663932!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e3579523c8d25d%3A0x40dc8d7053829b0!2s41000%20Blois!5e0!3m2!1sfr!2sfr!4v1669961165325!5m2!1sfr!2sfr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+
+        <script>
+            let bg = document.getElementById('bg')
+            let foret = document.getElementById('foret')
+            let logo = document.getElementById('logo')
+            let oiseaux = document.getElementById('oiseaux')
+            let lune = document.getElementById('lune')
+            let prince = document.getElementById('prince')
+            let text = document.getElementById('text')
+            let button = document.getElementById('btn')
+
+            window.addEventListener('scroll',function(){
+                let value = window.scrollY;
+                
+                text.style.marginRight = value * 1.5 + 'px';
+                button.style.marginLeft = value * 1.2 + 'px';
+                bg.style.top = value * 0.9 + 'px';
+                logo.style.top = value * 1 + 'px';
+            })
+        </script>
+    </body>
+</html>
