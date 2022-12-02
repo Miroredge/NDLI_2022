@@ -33,6 +33,11 @@ body {
     transition-duration: 500ms;
 }
 
+.navbar ul a {
+    color: white;
+    text-decoration-line: none;
+}
+
 .navbar ul li {
     display: inline;
     padding: 1.5vw;
