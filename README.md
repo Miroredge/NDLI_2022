@@ -16,3 +16,19 @@ Liste des gens présent :
 | Yanis       |  SOURIOU   | L2 |
 | Dario       |  WEINBERGER| R&T2 |
 | Nassim      |  BELHADJ   | R&T2 |
+
+# Défis
+
+## Easter Egg
+
+La page de l'easter egg est accessible en tapant le konami code dans la page d'accueil.
+
+## This is better than hadouken
+
+Depuis la page d'accueil, on peut taper le konami code (haut haut bas bas gauche droite gauche droite b a).
+Cela ouvre la page de l'easter Egg.
+
+##
+
+
+
